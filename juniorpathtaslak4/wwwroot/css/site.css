@@ -1,0 +1,61 @@
+body {
+    padding-top: 56px;
+    background-color: #f0f8ff; /* Açýk mavi arka plan rengi */
+}
+
+.jumbotron {
+    background-color: #ffebcd; /* Açýk sarý arka plan rengi */
+    padding: 2rem 1rem;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+.card {
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h4 {
+    margin-bottom: 1rem;
+}
+
+.btn-primary, .btn-secondary, .btn-warning {
+    margin-top: 1rem;
+    border-radius: 20px; /* Butonlara yuvarlak köþeler ekleme */
+}
+
+.card-body {
+    text-align: center;
+    background-color: #fafad2; /* Açýk sarý arka plan rengi */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6347; /* Turuncu renk */
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #4682b4; /* Mavi renk */
+}
+
+.navbar-custom {
+    background-color: #4682b4; /* Mavi arka plan rengi */
+}
+
+    .navbar-custom .navbar-brand, .navbar-custom .nav-link {
+        color: #ffffff; /* Beyaz metin rengi */
+    }
+
+.footer-custom {
+    background-color: #4682b4;
+    color: #ffffff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

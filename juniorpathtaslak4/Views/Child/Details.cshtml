@@ -1,0 +1,54 @@
+﻿@model juniorpathtaslak4.Models.Child
+
+@{
+    ViewData["Title"] = "Child Details";
+}
+
+<h1>Child Details</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h4>Child Information</h4>
+        <dl class="row">
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">@Model.Name</dd>
+            <dt class="col-sm-3">Date of Birth</dt>
+            <dd class="col-sm-9">@Model.DateOfBirth.ToShortDateString()</dd>
+            <dt class="col-sm-3">Age</dt>
+            <dd class="col-sm-9">@Model.Age</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h4>Daily Activities</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Activity</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var activity in Model.DailyActivities)
+                {
+                    <tr>
+                        <td>@activity.Date.ToShortDateString()</td>
+                        <td>@activity.ActivityDescription</td>
+                        <td>@activity.Score</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <a href="/Child/AddDailyActivity/@Model.Id" class="btn btn-primary">Add Daily Activity</a>
+        <a href="/Child/Edit/@Model.Id" class="btn btn-warning">Edit</a>
+        <a href="/Child" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
